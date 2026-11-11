@@ -26,7 +26,7 @@ export default function App() {
         </a>
       </header>
 
-      {/* FULL-BLEED ARCHITECTURAL HERO (ZERO ITALIC SLOP, ZERO PILL BARS) */}
+      {/* FULL-BLEED ARCHITECTURAL HERO */}
       <header id="top" className="hero-fullbleed">
         <img
           src="/references/sites/site-5-vespers.jpg"
@@ -42,18 +42,20 @@ export default function App() {
               BOTANICAL RESIN EXTRACTION
               <span className="hero-subline">SLOW DISTILLATION NO. 09.</span>
             </h1>
-            <p className="hero-lead">Slow cold-extraction resins and wild rockrose aged in dark glass demijohns across Provencal winters.</p>
+            <p className="hero-lead">
+              Slow cold-extraction resins and wild rockrose aged in dark glass demijohns across Provencal winters.
+            </p>
             <a href="#details" className="editorial-cta-btn">
               Explore Specification
             </a>
           </div>
 
           <div className="hero-quiet-caption" aria-label="Engineering Readouts">
-            <span>18-MONTH CURE</span>
+            <span>180-DAY COLD MACERATION</span>
             <span>·</span>
-            <span>HAND-PRESSED LABDANUM</span>
+            <span>1.42% PURE ABSOLUTE</span>
             <span>·</span>
-            <span>UV-DARK GLASS</span>
+            <span>IFRA 51ST AMENDMENT</span>
           </div>
         </div>
       </header>
@@ -62,18 +64,18 @@ export default function App() {
       <section id="details" className="lab-section">
         <div className="lab-grid">
           <div>
-            <span className="hero-small-label">ENGINEERING BENCH // ACTIVE MODE</span>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', textTransform: 'uppercase', marginBottom: '1rem' }}>
-              Precision Telemetry & Output
+            <span className="hero-small-label">BOTANICAL BENCH // ACTIVE HARVEST</span>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', marginBottom: '1rem', letterSpacing: '-0.01em', color: 'var(--ink-primary)' }}>
+              Extraction Telemetry &amp; Purity
             </h2>
-            <p style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, marginBottom: '2rem' }}>
-              Slow-distilled botanical resins and rare tinctures, aged in small glass carboys with zero synthetic stabilizers.
+            <p style={{ color: 'var(--ink-muted)', lineHeight: 1.6, marginBottom: '2rem' }}>
+              Slow-macerated botanical resins and wild rockrose tinctures, aged in small glass carboys with zero synthetic additives.
             </p>
 
             <div style={{ marginBottom: '1.5rem' }}>
-              <label style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-mono)', fontSize: '0.75rem', marginBottom: '0.5rem' }}>
-                <span>CALIBRATION ENVELOPE</span>
-                <span style={{ color: 'var(--accent-color)' }}>{metricValue}% NOMINAL</span>
+              <label style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-mono)', fontSize: '0.75rem', marginBottom: '0.5rem', color: 'var(--ink-primary)' }}>
+                <span>MACERATION CYCLE ENVELOPE</span>
+                <span style={{ color: 'var(--accent-color)', fontWeight: 700 }}>{metricValue}% NOMINAL ({Math.round(metricValue * 1.8)} DAYS COLD CURE)</span>
               </label>
               <input
                 type="range"
@@ -88,20 +90,24 @@ export default function App() {
             <table className="spec-table">
               <tbody>
                 <tr>
-                  <td className="spec-label">ACTIVE SUB-SYSTEM</td>
+                  <td className="spec-label">ACTIVE PROTOCOL</td>
                   <td className="spec-value">{activeTab}</td>
                 </tr>
                 <tr>
-                  <td className="spec-label">EFFICIENCY FACTOR</td>
-                  <td className="spec-value">{(0.91 + (metricValue / 1000)).toFixed(3)} η</td>
+                  <td className="spec-label">COLD MACERATION</td>
+                  <td className="spec-value">180 Days in darkened amber glass</td>
                 </tr>
                 <tr>
-                  <td className="spec-label">THERMAL DISSIPATION</td>
-                  <td className="spec-value">{(24 + (metricValue * 0.4)).toFixed(1)} °C</td>
+                  <td className="spec-label">EXTRACTION YIELD</td>
+                  <td className="spec-value">1.42% pure absolutes by weight</td>
                 </tr>
                 <tr>
-                  <td className="spec-label">STATUS PROTOCOL</td>
-                  <td className="spec-value" style={{ color: 'var(--accent-color)' }}>VERIFIED · ZERO TOLERANCE</td>
+                  <td className="spec-label">SOLVENT PURITY</td>
+                  <td className="spec-value">Certified organic neutral cane spirit (96.5% ABV)</td>
+                </tr>
+                <tr>
+                  <td className="spec-label">COMPOUNDING STANDARD</td>
+                  <td className="spec-value" style={{ color: 'var(--accent-color)' }}>IFRA 51st Amendment Artisan Registry</td>
                 </tr>
               </tbody>
             </table>
@@ -109,12 +115,12 @@ export default function App() {
 
           <div className="lab-display-card">
             <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-soft)', paddingBottom: '0.75rem', marginBottom: '1.5rem' }}>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-color)' }}>DIAGNOSTIC VISUALIZER</span>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem' }}>STAGE: {metricValue} / 100</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-color)', fontWeight: 700 }}>CHROMATOGRAPHIC ASSAY</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--ink-muted)' }}>CYCLE: {metricValue} / 100</span>
             </div>
 
-            <div style={{ height: '240px', display: 'flex', alignItems: 'flex-end', gap: '8px', background: 'rgba(0,0,0,0.5)', padding: '1rem', border: '1px solid var(--border-soft)' }}>
-              {[30, 45, 60, 40, 75, 90, 85, 95, 70, 80, 65, 88].map((base, idx) => {
+            <div style={{ height: '220px', display: 'flex', alignItems: 'flex-end', gap: '8px', background: 'var(--surface-color)', padding: '1.25rem', border: '1px solid var(--border-soft)' }}>
+              {[30, 45, 60, 42, 75, 90, 84, 94, 72, 80, 66, 85].map((base, idx) => {
                 const height = Math.min(100, Math.round((base * metricValue) / 75));
                 return (
                   <div
@@ -122,7 +128,7 @@ export default function App() {
                     style={{
                       flex: 1,
                       height: `${height}%`,
-                      background: idx % 2 === 0 ? 'var(--accent-color)' : 'rgba(255,255,255,0.4)',
+                      background: idx % 2 === 0 ? 'var(--accent-color)' : 'rgba(23, 29, 23, 0.15)',
                       transition: 'height 0.2s ease'
                     }}
                   />
@@ -130,20 +136,20 @@ export default function App() {
               })}
             </div>
 
-            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'rgba(255,255,255,0.6)' }}>
-              <span>HARMONIC HARVEST</span>
-              <span style={{ color: 'var(--accent-color)' }}>DELTA-V PASSING</span>
+            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--ink-muted)' }}>
+              <span>SOLVENT MATRIX</span>
+              <span style={{ color: 'var(--accent-color)', fontWeight: 700 }}>96.5% ABV ORGANIC SPIRIT</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer id="inquire" style={{ borderTop: '1px solid var(--border-soft)', padding: '3.5rem', textAlign: 'center', background: 'var(--surface-color)' }}>
-        <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', textTransform: 'uppercase', marginBottom: '1rem' }}>
+      <footer id="inquire" style={{ borderTop: '1px solid var(--border-soft)', padding: '4rem 3.5rem', textAlign: 'center', background: 'var(--surface-color)' }}>
+        <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem', marginBottom: '0.75rem', letterSpacing: '0.04em', color: 'var(--ink-primary)' }}>
           Atelier Vespers
         </p>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.1em' }}>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--ink-muted)', letterSpacing: '0.1em' }}>
           GRASSE · VALENSOLE // WINTER HARVEST · COMMISSIONS &amp; SPECIFICATIONS OPEN FOR 2026
         </p>
       </footer>

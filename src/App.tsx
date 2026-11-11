@@ -69,7 +69,7 @@ export default function App() {
               Extraction Telemetry &amp; Purity
             </h2>
             <p style={{ color: 'var(--ink-muted)', lineHeight: 1.6, marginBottom: '2rem' }}>
-              Slow-macerated botanical resins and wild rockrose tinctures, aged in small glass carboys with zero synthetic additives.
+              Slow-macerated botanical resins and wild rockrose tinctures, aged in small glass carboys with unadulterated plant absolutes.
             </p>
 
             <div style={{ marginBottom: '1.5rem' }}>
